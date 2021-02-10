@@ -10,6 +10,8 @@ gpio -v
 sudo apt-get install ttf-wqy-zenhei
 sudo apt-get install python3-pip
 sudo apt-get install libatlas-base-dev
+apt-get install libopenjp2-7
+apt-get install libtiff5
 sudo pip3 install RPi.GPIO --timeout 1000
 sudo pip3 install spidev --timeout 1000
 sudo pip3 install numpy --timeout 1000
