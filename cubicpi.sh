@@ -16,6 +16,8 @@ sudo pip3 install numpy --timeout 1000
 pip3 install Pillow
 wget https://www.piwheels.org/simple/numpy/numpy-1.20.1-cp37-cp37m-linux_armv6l.whl
 pip3 install numpy-1.20.1-cp37-cp37m-linux_armv6l.whl
+wget https://www.piwheels.org/simple/pillow/Pillow-8.1.0-cp37-cp37m-linux_armv6l.whl
+pip3 install Pillow-8.1.0-cp37-cp37m-linux_armv6l.whl
 sudo apt-get install p7zip-full
 wget http://www.waveshare.net/w/upload/b/bd/1.3inch_LCD_HAT_code.7z
 7z x 1.3inch_LCD_HAT_code.7z -r -o./1.3inch_LCD_HAT_code
