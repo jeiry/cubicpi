@@ -9,9 +9,11 @@ sudo dpkg -i wiringpi-latest.deb
 gpio -v
 sudo apt-get install ttf-wqy-zenhei
 sudo apt-get install python3-pip
+sudo apt-get install libatlas-base-dev
 sudo pip3 install RPi.GPIO --timeout 1000
 sudo pip3 install spidev --timeout 1000
 sudo pip3 install numpy --timeout 1000
+pip3 install Pillow
 wget https://www.piwheels.org/simple/numpy/numpy-1.20.1-cp37-cp37m-linux_armv6l.whl
 pip3 install numpy-1.20.1-cp37-cp37m-linux_armv6l.whl
 sudo apt-get install p7zip-full
