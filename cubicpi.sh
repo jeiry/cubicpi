@@ -12,6 +12,7 @@ sudo apt-get install ttf-wqy-zenhei
 sudo apt-get install python3-pip
 sudo pip3 install RPi.GPIO
 sudo pip3 install spidev
+sudo pip3 install numpy
 sudo apt-get install p7zip-full
 wget http://www.waveshare.net/w/upload/b/bd/1.3inch_LCD_HAT_code.7z
 7z x 1.3inch_LCD_HAT_code.7z -r -o./1.3inch_LCD_HAT_code
