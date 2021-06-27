@@ -14,13 +14,14 @@ bus = 0
 device = 0
 
 # 240x240 display with hardware SPI:
-disp = ST7789.ST7789(SPI.SpiDev(bus, device),RST, DC, BL)
+# disp = ST7789.ST7789(SPI.SpiDev(bus, device),RST, DC, BL)
+disp = ST7789.ST7789(port=0, cs=0, rst=RST, dc=DC, backlight=BL, rotation=0)
 
 # Initialize library.
-disp.Init()
+# disp.Init()
 
 # Clear display.
-disp.clear()
+# disp.clear()
 
 fans = 0
 fansChange = ''
@@ -58,6 +59,7 @@ if __name__ == '__main__':
     i = 0
     checkFans = 0
     while True:
+        start_time = time.time()
         if checkFans == 0:
             t = threading.Thread(target=updateBFans, args=())  # 创建线程
             t.setDaemon(True)
@@ -71,13 +73,16 @@ if __name__ == '__main__':
                   font=ImageFont.truetype("迷你简综艺.TTF", 36))
         draw.text((105, 186), '%s'%fansChange, fill="#00ff12",
                   font=ImageFont.truetype("迷你简综艺.TTF", 30))
-        btv = Image.open("btv.png")
+        # btv = Image.open("btv.png")
+        btv = Image.open("avator.jpg")
         btv = btv.resize((74, 68))
         image1.paste(btv, box=(20, 150))
         image1 = image1.rotate(180)
         image1 = image1.transpose(Image.FLIP_LEFT_RIGHT)
-        disp.ShowImage(image1, 0, 0)
-        time.sleep(1)
+        disp.display(image1)
+        end_time = time.time()
+        # print("耗时: {:.2f}秒".format(end_time - start_time))
+        time.sleep(1 - (end_time - start_time))
         i += 1
         checkFans += 1
         if checkFans == 60:
