@@ -3,15 +3,15 @@ wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.68.tar.gz
 tar zxvf bcm2835-1.68.tar.gz 
 cd bcm2835-1.68/
 sudo ./configure && sudo make && sudo make check && sudo make install
-sudo apt-get install wiringpi
+sudo apt-get -y install wiringpi
 wget https://project-downloads.drogon.net/wiringpi-latest.deb
 sudo dpkg -i wiringpi-latest.deb
 gpio -v
-sudo apt-get install ttf-wqy-zenhei
-sudo apt-get install python3-pip
-sudo apt-get install libatlas-base-dev
-apt-get install libopenjp2-7
-apt-get install libtiff5
+sudo apt-get -y install ttf-wqy-zenhei
+sudo apt-get -y install python3-pip
+sudo apt-get -y install libatlas-base-dev
+sudo apt-get -y install libopenjp2-7
+sudo apt-get -y install libtiff5
 sudo pip3 install RPi.GPIO --timeout 1000
 sudo pip3 install spidev --timeout 1000
 sudo pip3 install numpy --timeout 1000
